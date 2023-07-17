@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Box, Card, CardBody, Stack, Text } from "@chakra-ui/react";
+import "./App.css";
+import { WTFPLFullNameHeading } from "./components/heading";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Stack spacing={6}>
+        <WTFPLFullNameHeading />
+        <Box className="license-body-card">
+          <Text>DO WHAT THE HECK YOU WANT TO PUBLIC LICENSE</Text>
+          <Text>Version 0, July 2023</Text>
+          <Text>Copyright (C) 2023 Zhan Jie</Text>
+          <Text>
+            Everyone is permitted to copy and distribute verbatim or modified
+            copies of this license document, and changing it is allowed as long
+            as the name is changed.
+          </Text>
+          <Text>
+            DO WHAT THE HECK YOU WANT TO PUBLIC LICENSE <br /> TERMS AND
+            CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+          </Text>
+          <Text>0. You just DO WHAT THE HECK YOU WANT TO.</Text>
+        </Box>
+      </Stack>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
